@@ -24,7 +24,7 @@
    background: white;
    color: $grey;
    font-size: 12px;
-   height: 100%;
+   margin: 0;
  }
 
  header {
@@ -90,8 +90,7 @@
  }
 
  #root {
-   height: 100%;
-   padding-top: 20px;
+   padding: 20px 0;
  }
 
  h2 {
@@ -122,16 +121,142 @@
    display: flex;
    align-items: center;
    border-top: 1px solid black;
-   border-bottom: 1px solid black;
    padding: 5px 10px;
  }
 
- .pokemon-index-item + .pokemon-index-item {
-   border-top: none;
+ .pokemon-index-item:hover {
+   background-color: papayawhip;
  }
 
- .pokedex ul {
+ .sidebar a:last-of-type .pokemon-index-item{
+   border-bottom: 1px solid black;
+ }
+
+ .sidebar {
+   width: 25%;
    list-style: none;
    margin: 0;
    padding: 0;
+   max-height: calc(100vh - 103px);
+   overflow: scroll;
  }
+
+ .sidebar a {
+   text-decoration: none;
+ }
+
+ .sidebar a:visited {
+   color: black;
+ }
+
+ .sidebar a:hover {
+   color: black;
+ }
+
+ .pokedex {
+   display: flex;
+ }
+
+ .detail {
+   color: black;
+   flex: 1;
+   text-align: center;
+   max-height: calc(100vh - 103px);
+   overflow: scroll;
+ }
+
+ .detail ul {
+   display: inline-block;
+   list-style: none;
+   text-align: left;
+ }
+
+ .detail ul li {
+   font-size: 20px;
+   line-height: 1.48;
+ }
+
+.detail figure {
+  background: deeppink;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+.detail figure img {
+  height: 380px;
+  margin: auto;
+}
+
+.items {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.items > h3 {
+  margin-top: 0;
+}
+
+.items ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul.item-images {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.items img {
+  display: block;
+  width: 150px;
+  height: 150px;
+}
+
+.items a {
+  padding: 10px;
+}
+
+.items a:hover {
+  border-radius: 10px;
+  background: papayawhip;
+}
+
+form {
+  padding: 0 20px;
+}
+
+input, select {
+  margin: 10px;
+  display: block;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+}
+
+header a {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 5px;
+  font-weight: bold;
+}
+
+header a:hover {
+  background-color: white;
+  color: gray;
+  box-shadow: 0 1px 1px 0 black;
+}
